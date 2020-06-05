@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">finalApp</string>
-    
+    <string name="title">"LA VIE EN ROSE"</string>
+    <string name="input">Input the keywords</string>
+    <string name="Searchch">SEARCH NOW</string>
+
 </resources>
