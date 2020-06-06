@@ -32,6 +32,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.security.interfaces.ECKey;
 
 public class MainActivity extends AppCompatActivity implements Runnable {
 
@@ -63,19 +64,6 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         };
     }
 
-
-    public void openOne(View btn) {
-
-    }
-
-    public void onClick(View btn) {
-
-    }
-
-    private void openConfig() {
-
-    }
-
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
     }
@@ -102,7 +90,6 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 e.printStackTrace();
             }
             Message msg = handler.obtainMessage(5);
-//msg.what = 5;
             msg.obj = "Hello from run()";
             handler.sendMessage(msg);
 
@@ -111,6 +98,51 @@ public class MainActivity extends AppCompatActivity implements Runnable {
             try {
                 doc = Jsoup.connect("https://movie.douban.com/top250").get();
                 Log.i(TAG, "run: " + doc.title());
+
+                Elements ols = doc.getElementsByTag("ol");
+
+                /*int m =1;
+                for(Element ol :ols){
+                    Log.i(TAG, "run: ol["+m+"] " + ols);
+                }*/
+
+                Element ol1 = ols.get(0);
+                //Log.i(TAG, "run: ol1" + ol1);
+                //获取span中的数据
+                Elements lis = ol1.getElementsByTag("li");
+
+                for(Element li:lis)
+                {
+                    Log.i(TAG, "run: spans "+ li);
+
+                }
+
+                Elements spans = ol1.getElementsByTag("span");
+                Elements ps = ol1.getElementsByTag("p");
+                Elements as = ol1.getElementsByTag("a");
+                for(Element span:spans){
+//                    Log.i(TAG, "run: div" + div);
+
+                    Log.i(TAG, "run: text=" +span.text());
+
+                }
+                /*for(Element p :ps){
+                    Log.i(TAG, "run: p" + ps);
+                }
+
+                for(Element a :as){
+                    Log.i(TAG, "run: href" + a);
+                }
+
+                for(int q = 0;i<divs.size();q+=38){
+                    Element div1 = divs.get(i);
+                    Element p1 = ps.get(i);
+                    Element a1 = ps.get(i);
+
+                }*/
+
+
+
 
             } catch (IOException e) {
                 e.printStackTrace();
