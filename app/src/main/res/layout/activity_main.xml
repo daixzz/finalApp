@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background"
+    android:background="#F6DCCE"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,11 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="107dp"
         android:gravity="center"
+        android:shadowColor="#CEE8F6"
         android:text="@string/title"
-        android:textColor="#A27E7E"
+        android:textColorHighlight="#314A43"
+        android:textSize="35dp"
         android:textStyle="bold"
-        android:typeface="serif"
-        android:textSize="35dp" />
+        android:typeface="serif" />
 
     <EditText
         android:id="@+id/keyWord"
@@ -29,10 +30,18 @@
     <Button
         android:id="@+id/button3"
 
+        android:shadowColor="#314A43"
+        android:textColor="#737C7B"
         android:onClick="openOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Searchch" />
+
+
+
+
+
+
 
 
 
