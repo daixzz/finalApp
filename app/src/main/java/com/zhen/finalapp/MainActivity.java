@@ -65,17 +65,33 @@ public class MainActivity extends AppCompatActivity implements Runnable {
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.ranking,menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        return super.onOptionsItemSelected(item);
+        if(item.getItemId() == R.id.menu_set){
+            openConfig();
+
+        }
+
+            return super.onOptionsItemSelected(item);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    public void openOne(View btn){
+        openConfig();
+    }
+
+    private void openConfig() {
+        Log.i("open", "openOne: ");
+        Intent hello = new Intent(this, AnswerActivity.class);
+        startActivity(hello);
     }
 
     @Override
@@ -96,36 +112,58 @@ public class MainActivity extends AppCompatActivity implements Runnable {
 
             Document doc = null;
             try {
-                doc = Jsoup.connect("https://movie.douban.com/top250").get();
+                /*doc = Jsoup.connect("https://movie.douban.com/top250").get();*/
+                doc = Jsoup.connect("https://weread.qq.com/web/category/all").get();
+
                 Log.i(TAG, "run: " + doc.title());
 
-                Elements ols = doc.getElementsByTag("ol");
+//                Elements ols = doc.getElementsByTag("ol");
+                Elements uls = doc.getElementsByTag("ul");
+
+/*                int m = 1;
+                for(Element ul :uls){
+                    Log.i(TAG, "run: ul["+m+"]" + uls);
+                }*/
+
+//获取书名
+
+                Element ul2=uls.get(1);
+//                Log.i(TAG, "run: ul2" + ul2);
+
+                Elements pw = ul2.getElementsByTag("p");
+
+                for(Element p :pw){
+                    Log.i(TAG, "run:p " + p);
+                }
 
                 /*int m =1;
                 for(Element ol :ols){
                     Log.i(TAG, "run: ol["+m+"] " + ols);
                 }*/
 
-                Element ol1 = ols.get(0);
+//                Element ol1 = ols.get(0);
                 //Log.i(TAG, "run: ol1" + ol1);
                 //获取span中的数据
-                Elements lis = ol1.getElementsByTag("li");
+//                Elements lis = ol1.getElementsByTag("li");
 
-                for(Element li:lis)
-                {
-                    Log.i(TAG, "run: spans "+ li);
-
-                }
-
-                Elements spans = ol1.getElementsByTag("span");
-                Elements ps = ol1.getElementsByTag("p");
-                Elements as = ol1.getElementsByTag("a");
-                for(Element span:spans){
-//                    Log.i(TAG, "run: div" + div);
-
-                    Log.i(TAG, "run: text=" +span.text());
-
-                }
+//                for(Element li:lis)
+//                {
+//                    Log.i(TAG, "run: spans "+ li);
+//
+//                }
+//
+//                Elements spans = ol1.getElementsByTag("span");
+//                Elements ps = ol1.getElementsByTag("p");
+//                Elements as = ol1.getElementsByTag("a");
+//                for(Element span:spans){
+////                    Log.i(TAG, "run: div" + div);
+//
+//                    Log.i(TAG, "run: text=" +span.text());
+//
+//                }
+//                for(Element p:ps){
+//                    Log.i(TAG, "run: p=" + p.text());
+//                }
                 /*for(Element p :ps){
                     Log.i(TAG, "run: p" + ps);
                 }

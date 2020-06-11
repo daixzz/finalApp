@@ -3,5 +3,11 @@
     <string name="title">"LA VIE EN ROSE"</string>
     <string name="input">Input the keywords</string>
     <string name="Searchch">SEARCH NOW</string>
+    <string name="menu">MBM ranking</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Top_moviess">Top Movies</string>
+    <string name="top_books">TOP  BOOKS</string>
 
 </resources>

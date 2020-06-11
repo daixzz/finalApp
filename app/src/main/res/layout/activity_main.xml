@@ -29,14 +29,12 @@
     <Button
         android:id="@+id/button3"
 
+        android:onClick="openOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Searchch" />
 
 
-    <ListView
-        android:id="@+id/Listview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
