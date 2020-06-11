@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         return true;
     }
 
+    
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.menu_set){
@@ -90,9 +91,21 @@ public class MainActivity extends AppCompatActivity implements Runnable {
 
     private void openConfig() {
         Log.i("open", "openOne: ");
-        Intent hello = new Intent(this, AnswerActivity.class);
+        Intent hello = new Intent(this,AnswerActivity.class);
         startActivity(hello);
     }
+
+    public void openMovie(View btn){
+        Intent ok = new Intent(this,Book_ListActivity.class);
+        startActivity(ok);
+    }
+
+    public void openBooks(View btn){
+        Intent bookkks = new Intent(this,Movie_ListActivity.class);
+        startActivity(bookkks);
+    }
+
+
 
     @Override
     public void run() {

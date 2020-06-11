@@ -12,14 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AnswerActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".booklist_itemActivity"></activity>
+        <activity android:name=".movielist_itemActivity" />
+        <activity android:name=".Book_ListActivity" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Movie_ListActivity" />
+        <activity android:name=".AnswerActivity" />
+        <activity android:name=".MainActivity">
+
+        </activity>
+
     </application>
 
 </manifest>
