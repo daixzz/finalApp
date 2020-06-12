@@ -96,12 +96,12 @@ public class MainActivity extends AppCompatActivity implements Runnable {
     }
 
     public void openMovie(View btn){
-        Intent ok = new Intent(this,Book_ListActivity.class);
+        Intent ok = new Intent(this,Movie_ListActivity.class);
         startActivity(ok);
     }
 
     public void openBooks(View btn){
-        Intent bookkks = new Intent(this,Movie_ListActivity.class);
+        Intent bookkks = new Intent(this,Book_ListActivity.class);
         startActivity(bookkks);
     }
 
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 /*doc = Jsoup.connect("https://movie.douban.com/top250").get();*/
                 doc = Jsoup.connect("https://weread.qq.com/web/category/all").get();
 
-                Log.i(TAG, "run: " + doc.title());
+//                Log.i(TAG, "run: " + doc.title());
 
 //                Elements ols = doc.getElementsByTag("ol");
                 Elements uls = doc.getElementsByTag("ul");

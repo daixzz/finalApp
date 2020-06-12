@@ -11,5 +11,9 @@
     <string name="top_books">TOP  BOOKS</string>
     <string name="checkbooks">TOP BOOKS</string>
     <string name="top_Movies">TOP MOVIES</string>
+    <string name="booktitle">TOP 20 BOOKS</string>
+    <string name="fromwhere">——from WeChat Reading</string>
+    <string name="movietitle">TOP 25 MOVIES</string>
+    <string name="fromwheree">——FROM DOUBAN</string>
 
 </resources>

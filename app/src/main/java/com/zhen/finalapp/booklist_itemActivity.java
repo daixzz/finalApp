@@ -11,4 +11,7 @@ public class booklist_itemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booklist_item);
     }
+
+
+
 }
