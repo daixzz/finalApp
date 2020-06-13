@@ -131,11 +131,15 @@ public class Book_ListActivity extends ListActivity implements Runnable {
                     Element td = pw.get(i+1);
                     Element td2 = pw.get(i+2);
 
+                    int x = i/5+1;
+
                     String tdStr = td.text();
+
+                    String result = String.valueOf(x) +"."+tdStr;
                     String pStr = td2.text();
 
                     HashMap<String, String> map = new HashMap<String, String>();
-                    map.put("bookname", tdStr);
+                    map.put("bookname", result);
                     map.put("authorname", pStr);
 
                     rateList.add(map);

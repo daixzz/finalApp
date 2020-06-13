@@ -66,7 +66,7 @@ public class Movie_ListActivity extends ListActivity implements Runnable{
                     SimpleAdapter adapter = new SimpleAdapter(Movie_ListActivity.this, retList, // listItems数据源
                             R.layout.activity_movielist_item, // ListItem的XML布局实现
                             new String[] { "movieName", "DirectorName" },
-                            new int[] { R.id.bookname, R.id.theAuthor });
+                            new int[] { R.id.movieName, R.id.directorName });
                     setListAdapter(adapter);
                     Log.i("handler","reset list...");;
                 }
@@ -82,15 +82,15 @@ public class Movie_ListActivity extends ListActivity implements Runnable{
         listItems = new ArrayList<HashMap<String, String>>();
         for (int i = 0; i < 10; i++) {
             HashMap<String, String> map = new HashMap<String, String>();
-            map.put("bookname", "name： " + i); // 标题文字
-            map.put("authorname", "author" + i); // 详情描述
+            map.put("movieName", "name： " + i); // 标题文字
+            map.put("DirectorName", "author" + i); // 详情描述
             listItems.add(map);
         }
         // 生成适配器的Item和动态数组对应的元素
         listItemAdapter = new SimpleAdapter(this, listItems, // listItems数据源
-                R.layout.activity_booklist_item, // ListItem的XML布局实现
-                new String[] { "bookname", "authorname" },
-                new int[] { R.id.bookname, R.id.theAuthor }
+                R.layout.activity_movielist_item, // ListItem的XML布局实现
+                new String[] { "movieName", "DirectorName" },
+                new int[] { R.id.movieName, R.id.directorName }
         );
     }
     public void run() {
@@ -102,11 +102,11 @@ public class Movie_ListActivity extends ListActivity implements Runnable{
         Document doc = null;
         try {
             /*doc = Jsoup.connect("https://movie.douban.com/top250").get();*/
-            doc = Jsoup.connect("https://weread.qq.com/web/category/all").get();
+            doc = Jsoup.connect("https://movie.douban.com/top250").get();
 
 //                Log.i(TAG, "run: " + doc.title());
 
-            Elements uls = doc.getElementsByTag("ul");
+            Elements ols = doc.getElementsByTag("ol");
 
 /*                int m = 1;
                 for(Element ul :uls){
@@ -115,29 +115,47 @@ public class Movie_ListActivity extends ListActivity implements Runnable{
 
 //获取书名
 
-            Element ul2=uls.get(1);
+            Element ol1=ols.get(0);
 //                Log.i(TAG, "run: ul2" + ul2);
 
-            Elements pw = ul2.getElementsByTag("p");
+            Elements as = ol1.getElementsByTag("a");
 
-            for(Element p :pw){
-                Log.i(TAG, "run:p " + p.text());
+            /*for(Element a :as){
+                Log.i(TAG, "run:a " + a.text());
+            }*/
+
+            Elements ps = ol1.getElementsByTag("p");
+
+            for(Element p :ps){
+                Log.i(TAG, "run: p" + p.text());
             }
 
 
-            for (int i = 0; i < pw.size(); i+=5) {
-                Element td = pw.get(i+1);
-                Element td2 = pw.get(i+2);
 
+
+            for (int i = 0; i < as.size(); i+=2) {
+                Element td = as.get(i+1);
+//                Element td2 = spans.get(i+2);
+
+                Element pss=ps.get(i);
+
+
+                int x = i/2 +1;
                 String tdStr = td.text();
-                String pStr = td2.text();
+
+                String result = String.valueOf(x) +"."+tdStr;
+//                String pStr = td2.text();
+
+                String psss=pss.text();
+
 
                 HashMap<String, String> map = new HashMap<String, String>();
-                map.put("bookname", tdStr);
-                map.put("authorname", pStr);
+                map.put("movieName", result);
+                map.put("DirectorName", psss);
 
                 rateList.add(map);
-                Log.i("td",tdStr + "=>" + pStr);
+                Log.i("wwwww",tdStr);
+                Log.i(TAG, "run: " +psss);
             }
 
             marker = true;

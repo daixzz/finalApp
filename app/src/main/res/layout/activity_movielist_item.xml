@@ -10,23 +10,23 @@
     tools:context=".movielist_itemActivity">
 
     <TextView
-        android:id="@+id/bookname"
+        android:id="@+id/movieName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment"
         android:textStyle="bold"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
 
 
 
     <TextView
-        android:id="@+id/theAuthor"
+        android:id="@+id/directorName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="end"
         android:text="hello "
-        android:textSize="20sp" />
+        android:textSize="15sp" />
 
 
 </LinearLayout>

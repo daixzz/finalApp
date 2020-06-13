@@ -26,7 +26,6 @@
             android:id="@+id/theAuthor"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="end"
             android:text="hello "
             android:textSize="20sp" />
 
