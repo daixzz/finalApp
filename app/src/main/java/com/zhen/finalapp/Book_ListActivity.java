@@ -96,9 +96,6 @@ public class Book_ListActivity extends ListActivity implements Runnable {
         );
     }
     public void run() {
-
-
-
         boolean marker = false;
         List<HashMap<String, String>> rateList = new ArrayList<HashMap<String, String>>();
             Document doc = null;
@@ -135,7 +132,7 @@ public class Book_ListActivity extends ListActivity implements Runnable {
 
                     String tdStr = td.text();
 
-                    String result = String.valueOf(x) +"."+tdStr+"（书籍）";
+                    String result = "[书籍]"+String.valueOf(x) +"."+tdStr;
                     String pStr = td2.text();
 
                     HashMap<String, String> map = new HashMap<String, String>();

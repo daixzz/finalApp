@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
     EditText keyw;
 
     Handler handler;
-    String keyword;
+    String keyword ;
 
 
     @Override
@@ -98,7 +98,11 @@ public class MainActivity extends AppCompatActivity implements Runnable {
     private void openConfig() {
         Log.i("open", "openOne: ");
         Intent hello = new Intent(this,AnswerActivity.class);
-        startActivity(hello);
+        EditText editText = (EditText) findViewById(R.id.keyWord);
+        String message = editText.getText().toString();
+        hello.putExtra("EXTRA_MESSAGE",message);
+        startActivityForResult(hello,1);
+
     }
 
     public void openMovie(View btn){
@@ -110,6 +114,8 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         Intent bookkks = new Intent(this,Book_ListActivity.class);
         startActivity(bookkks);
     }
+
+
 
 
 

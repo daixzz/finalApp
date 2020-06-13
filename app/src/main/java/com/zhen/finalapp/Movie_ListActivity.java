@@ -140,7 +140,7 @@ public class Movie_ListActivity extends ListActivity implements Runnable{
                 int x = i/2 +1;
                 String tdStr = td.text();
 
-                String result = String.valueOf(x) +"."+tdStr+"(电影)";
+                String result ="[电影]" +String.valueOf(x) +"."+tdStr;
 //                String pStr = td2.text();
 
                 String psss=pss.text();
