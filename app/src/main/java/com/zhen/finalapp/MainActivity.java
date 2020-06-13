@@ -33,22 +33,28 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.interfaces.ECKey;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity implements Runnable {
 
 
     private final String TAG = "Rate";
     String updateDate = "";
-    EditText movie_keyw;
+    EditText keyw;
 
     Handler handler;
+    String keyword;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        movie_keyw = (EditText) findViewById(R.id.keyWord);
+        keyw = (EditText) findViewById(R.id.keyWord);
+
+         keyword = keyw.getText().toString();
+
 
 
         Thread t = new Thread(this);
@@ -69,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         return true;
     }
 
-    
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.menu_set){
@@ -110,90 +116,47 @@ public class MainActivity extends AppCompatActivity implements Runnable {
     @Override
     public void run() {
 
-        Log.i(TAG, "run: run()......");
-        for (int i = 1; i < 3; i++) {
-            Log.i(TAG, "run: i=" + i);
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
             Message msg = handler.obtainMessage(5);
             msg.obj = "Hello from run()";
             handler.sendMessage(msg);
 
 
-            Document doc = null;
+            Document doc1 = null;
+            Document doc2 = null;
+
             try {
-                /*doc = Jsoup.connect("https://movie.douban.com/top250").get();*/
-                doc = Jsoup.connect("https://weread.qq.com/web/category/all").get();
+                doc1 = Jsoup.connect("https://movie.douban.com/top250").get();
+                doc2 = Jsoup.connect("https://weread.qq.com/web/category/all").get();
 
 //                Log.i(TAG, "run: " + doc.title());
 
-//                Elements ols = doc.getElementsByTag("ol");
-                Elements uls = doc.getElementsByTag("ul");
-
-/*                int m = 1;
-                for(Element ul :uls){
-                    Log.i(TAG, "run: ul["+m+"]" + uls);
-                }*/
-
-//获取书名
+                Elements ols = doc1.getElementsByTag("ol");
+                Elements uls = doc2.getElementsByTag("ul");
 
                 Element ul2=uls.get(1);
-//                Log.i(TAG, "run: ul2" + ul2);
+                Element ol1 = ols.get(0);
 
                 Elements pw = ul2.getElementsByTag("p");
 
-                for(Element p :pw){
-                    Log.i(TAG, "run:p " + p);
-                }
+                Elements as = ol1.getElementsByTag("a");
 
-                /*int m =1;
-                for(Element ol :ols){
-                    Log.i(TAG, "run: ol["+m+"] " + ols);
-                }*/
+                Elements ps = ol1.getElementsByTag("p");
+                /*for(int n = 1;n < pw.size();n++){
+                    Element td = pw.get(n+1);
+                    Element td2 = pw.get(n+2);
 
-//                Element ol1 = ols.get(0);
-                //Log.i(TAG, "run: ol1" + ol1);
-                //获取span中的数据
-//                Elements lis = ol1.getElementsByTag("li");
+                    int x = n/5+1;
 
-//                for(Element li:lis)
-//                {
-//                    Log.i(TAG, "run: spans "+ li);
-//
-//                }
-//
-//                Elements spans = ol1.getElementsByTag("span");
-//                Elements ps = ol1.getElementsByTag("p");
-//                Elements as = ol1.getElementsByTag("a");
-//                for(Element span:spans){
-////                    Log.i(TAG, "run: div" + div);
-//
-//                    Log.i(TAG, "run: text=" +span.text());
-//
-//                }
-//                for(Element p:ps){
-//                    Log.i(TAG, "run: p=" + p.text());
-//                }
-                /*for(Element p :ps){
-                    Log.i(TAG, "run: p" + ps);
-                }
+                    String tdStr = td.text();
+                    String pStr = td2.text();
 
-                for(Element a :as){
-                    Log.i(TAG, "run: href" + a);
-                }
-
-                for(int q = 0;i<divs.size();q+=38){
-                    Element div1 = divs.get(i);
-                    Element p1 = ps.get(i);
-                    Element a1 = ps.get(i);
+                    if(tdStr.contains(keyword)||(pStr.contains(keyword))){
+                        HashMap<String, String> map = new HashMap<String, String>();
+                        map.put("movieName", tdStr);
+                        map.put("DirectorName", pStr);
+                    }
 
                 }*/
-
-
-
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -204,4 +167,5 @@ public class MainActivity extends AppCompatActivity implements Runnable {
 
 
     }
-}
+
+

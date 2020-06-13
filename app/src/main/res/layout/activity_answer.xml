@@ -4,11 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="#F0D3CF"
+
     android:layout_height="match_parent"
     tools:context=".AnswerActivity">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
+
+    <TextView
+        android:id="@+id/titlelll"
+        android:layout_width="match_parent"
+        android:layout_height="75sp"
+        android:background="#C098A4"
+
+        android:gravity="center"
+        android:text="@string/answerrr"
+        android:textSize="38dp"
+        android:textStyle="bold" />
+
+
+    <ListView
+        android:id="@android:id/list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

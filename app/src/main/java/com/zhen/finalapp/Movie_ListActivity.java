@@ -120,9 +120,6 @@ public class Movie_ListActivity extends ListActivity implements Runnable{
 
             Elements as = ol1.getElementsByTag("a");
 
-            /*for(Element a :as){
-                Log.i(TAG, "run:a " + a.text());
-            }*/
 
             Elements ps = ol1.getElementsByTag("p");
 
@@ -143,7 +140,7 @@ public class Movie_ListActivity extends ListActivity implements Runnable{
                 int x = i/2 +1;
                 String tdStr = td.text();
 
-                String result = String.valueOf(x) +"."+tdStr;
+                String result = String.valueOf(x) +"."+tdStr+"(电影)";
 //                String pStr = td2.text();
 
                 String psss=pss.text();

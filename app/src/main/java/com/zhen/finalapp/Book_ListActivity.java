@@ -135,7 +135,7 @@ public class Book_ListActivity extends ListActivity implements Runnable {
 
                     String tdStr = td.text();
 
-                    String result = String.valueOf(x) +"."+tdStr;
+                    String result = String.valueOf(x) +"."+tdStr+"（书籍）";
                     String pStr = td2.text();
 
                     HashMap<String, String> map = new HashMap<String, String>();
