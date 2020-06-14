@@ -104,6 +104,10 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         startActivityForResult(hello,1);
 
     }
+    public  void openMusic(View btn){
+        Intent fine = new Intent(this,Music_listActivity.class);
+        startActivity(fine);
+    }
 
     public void openMovie(View btn){
         Intent ok = new Intent(this,Movie_ListActivity.class);
@@ -113,6 +117,11 @@ public class MainActivity extends AppCompatActivity implements Runnable {
     public void openBooks(View btn){
         Intent bookkks = new Intent(this,Book_ListActivity.class);
         startActivity(bookkks);
+    }
+
+    public void addwants(View btn){
+        Intent adddd = new Intent(this,add_pageActivity.class);
+        startActivity(adddd);
     }
 
 
@@ -127,42 +136,18 @@ public class MainActivity extends AppCompatActivity implements Runnable {
             handler.sendMessage(msg);
 
 
-            Document doc1 = null;
-            Document doc2 = null;
+            Document doc = null;
 
             try {
-                doc1 = Jsoup.connect("https://movie.douban.com/top250").get();
-                doc2 = Jsoup.connect("https://weread.qq.com/web/category/all").get();
 
-//                Log.i(TAG, "run: " + doc.title());
+                doc = Jsoup.connect("https://www.billboard.com/charts/hot-100").get();
 
-                Elements ols = doc1.getElementsByTag("ol");
-                Elements uls = doc2.getElementsByTag("ul");
+                Elements ols = doc.getElementsByTag("ol");
 
-                Element ul2=uls.get(1);
-                Element ol1 = ols.get(0);
 
-                Elements pw = ul2.getElementsByTag("p");
+                int m = 0;
+                Log.i(TAG, "run: " + ols);
 
-                Elements as = ol1.getElementsByTag("a");
-
-                Elements ps = ol1.getElementsByTag("p");
-                /*for(int n = 1;n < pw.size();n++){
-                    Element td = pw.get(n+1);
-                    Element td2 = pw.get(n+2);
-
-                    int x = n/5+1;
-
-                    String tdStr = td.text();
-                    String pStr = td2.text();
-
-                    if(tdStr.contains(keyword)||(pStr.contains(keyword))){
-                        HashMap<String, String> map = new HashMap<String, String>();
-                        map.put("movieName", tdStr);
-                        map.put("DirectorName", pStr);
-                    }
-
-                }*/
 
             } catch (IOException e) {
                 e.printStackTrace();

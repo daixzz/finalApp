@@ -12,7 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Answer_itemActivity"></activity>
+        <activity android:name=".add_pageActivity"></activity>
+        <activity android:name=".Music_listActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Answer_itemActivity" />
         <activity android:name=".booklist_itemActivity" />
         <activity android:name=".movielist_itemActivity" />
         <activity android:name=".Book_ListActivity">
@@ -29,7 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AnswerActivity" >
+        <activity android:name=".AnswerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -16,5 +16,10 @@
     <string name="movietitle">TOP 25 MOVIES</string>
     <string name="fromwheree">——FROM DOUBAN</string>
     <string name="answerrr">SEARCH RESULT</string>
+    <string name="topTVSe">TOP 25 TV SERIES</string>
+    <string name="tvfromwheree">——FROM DOUBAN</string>
+    <string name="addSth">AddSth</string>
+    <string name="adddsth">ADD WISH LIST</string>
+    <string name="datee">DATE</string>
 
 </resources>

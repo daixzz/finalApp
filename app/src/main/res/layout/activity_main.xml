@@ -82,12 +82,16 @@
             android:layout_width="78dp"
             android:layout_height="374dp"
             android:background="#CDA7A9"
+            android:onClick="addwants"
             android:text="Button"
+            android:textColor="#375842"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.951"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/adddsth" />
 
         <Button
             android:id="@+id/button2"
@@ -96,6 +100,7 @@
             android:layout_marginTop="32dp"
             android:background="#DB91A4"
 
+            android:onClick="openMusic"
             android:text="Button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
