@@ -21,5 +21,10 @@
     <string name="addSth">AddSth</string>
     <string name="adddsth">ADD WISH LIST</string>
     <string name="datee">DATE</string>
+    <string name="typee">TYPE</string>
+    <string name="add_name">NAME</string>
+    <string name="notes">NOTES</string>
+    <string name="addsthhh">ADD WISH LIST</string>
+    <string name="showwish">SHOW WISH LIST</string>
 
 </resources>

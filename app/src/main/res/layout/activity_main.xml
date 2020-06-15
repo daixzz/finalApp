@@ -51,7 +51,7 @@
             android:layout_marginRight="284dp"
             android:background="#CD989A"
             android:onClick="openMovie"
-            android:text="@string/top_Movies"
+            android:text="@string/movietitle"
             android:textColor="#375842"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -83,7 +83,6 @@
             android:layout_height="374dp"
             android:background="#CDA7A9"
             android:onClick="addwants"
-            android:text="Button"
             android:textColor="#375842"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -91,7 +90,7 @@
             app:layout_constraintHorizontal_bias="0.951"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/adddsth" />
+            tools:text="@string/addsthhh" />
 
         <Button
             android:id="@+id/button2"
@@ -99,7 +98,7 @@
             android:layout_height="92dp"
             android:layout_marginTop="32dp"
             android:background="#DB91A4"
-
+            android:textColor="#375842"
             android:onClick="openMusic"
             android:text="Button"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -107,7 +106,8 @@
             app:layout_constraintHorizontal_bias="0.614"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.016" />
+            app:layout_constraintVertical_bias="0.044"
+            tools:text="@string/showwish" />
 
         <Button
             android:id="@+id/button4"
