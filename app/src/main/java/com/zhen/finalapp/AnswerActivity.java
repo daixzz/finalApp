@@ -39,6 +39,7 @@ public class AnswerActivity extends ListActivity implements Runnable{
     String TAG = "haha";
 
     String keyword ;
+    ItemManager manager;
 
     protected  void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -182,6 +183,26 @@ public class AnswerActivity extends ListActivity implements Runnable{
                 }
 
             }
+
+            manager = new ItemManager(this);
+            List<thingItem> testList = manager.listAll();
+
+            for (thingItem item : testList) {
+
+                String str1 = item.getTitlethings();
+                String str2 = item.getNotesthings() ;
+
+                if(str1.contains(keyword)||str2.contains(keyword)){
+                    HashMap<String, String> map = new HashMap<String, String>();
+                    map.put("resultName", str2);
+                    map.put("Producer", str1);
+                    rateList.add(map);
+
+                }
+
+            }
+
+
             marker = true;
 
         } catch (IOException e) {

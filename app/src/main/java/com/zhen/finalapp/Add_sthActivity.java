@@ -101,10 +101,15 @@ public class Add_sthActivity extends AppCompatActivity {
         Intent ok = new Intent(this,WishListActivity.class);
 
 
-        thingItem wiItem = new thingItem(title, notes);
+        thingItem wiItem = new thingItem(total, notes);
         manager = new ItemManager(this);
         manager.add(wiItem);
-        startActivity(ok);
+
+        ok.putExtra("total",total);
+        ok.putExtra("notes",notes);
+
+
+        startActivityForResult(ok,1);
 
 
 

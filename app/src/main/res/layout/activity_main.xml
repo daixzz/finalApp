@@ -83,7 +83,8 @@
             android:background="#6f9081"
             android:onClick="openWishList"
             android:text="@string/showwish"
-            android:textColor="#375842" />
+            android:textColor="#375842"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/TOP_movies"
@@ -93,7 +94,8 @@
             android:layout_marginTop="10dp"
             android:background="#5c7a6c"
             android:onClick="openMovie"
-            android:text="@string/Top_moviess" />
+            android:text="@string/Top_moviess"
+            android:textSize="20sp" />
 
     </LinearLayout>
 

@@ -173,8 +173,7 @@
         android:textColor="#314A43"
         android:textSize="25dp"
         android:onClick="onOpen"
-        android:text="Button"
-        tools:text="@string/open_List" />
+        android:text="@string/open_List" />
 
 
 </LinearLayout>
