@@ -12,8 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".add_pageActivity"></activity>
-        <activity android:name=".Music_listActivity">
+        <activity android:name=".wish_itemActivity"></activity>
+        <activity android:name=".Add_sthActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WishListActivity" />
+        <activity android:name=".theBeautyActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

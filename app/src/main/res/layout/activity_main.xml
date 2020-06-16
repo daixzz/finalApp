@@ -16,7 +16,7 @@
         android:gravity="center"
         android:text="@string/title"
         android:textColorHighlight="#314A43"
-        android:textSize="35dp"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="serif" />
 
@@ -53,7 +53,7 @@
             android:onClick="openMovie"
             android:text="@string/movietitle"
             android:textColor="#375842"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.048"
@@ -69,7 +69,7 @@
             android:onClick="openBooks"
             android:text="@string/checkbooks"
             android:textColor="#375842"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.059"
@@ -83,14 +83,15 @@
             android:layout_height="374dp"
             android:background="#CDA7A9"
             android:onClick="addwants"
+            android:text="@string/addsthhh"
             android:textColor="#375842"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.951"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/addsthhh" />
+           />
 
         <Button
             android:id="@+id/button2"
@@ -98,16 +99,15 @@
             android:layout_height="92dp"
             android:layout_marginTop="32dp"
             android:background="#DB91A4"
+            android:onClick="openWishList"
+            android:text="@string/showwish"
             android:textColor="#375842"
-            android:onClick="openMusic"
-            android:text="Button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.614"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.044"
-            tools:text="@string/showwish" />
+            app:layout_constraintVertical_bias="0.044" />
 
         <Button
             android:id="@+id/button4"
@@ -115,7 +115,6 @@
             android:layout_height="108dp"
             android:background="#A56D74"
 
-            android:text="Button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +125,6 @@
             android:id="@+id/button5"
             android:layout_width="61dp"
             android:layout_height="60dp"
-            android:text="Button"
             android:background="#CE93B1"
 
             app:layout_constraintBottom_toBottomOf="parent"

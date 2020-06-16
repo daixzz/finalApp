@@ -63,8 +63,6 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
-
-
                 super.handleMessage(msg);
             }
         };
@@ -104,8 +102,8 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         startActivityForResult(hello,1);
 
     }
-    public  void openMusic(View btn){
-        Intent fine = new Intent(this,Music_listActivity.class);
+    public  void openWishList(View btn){
+        Intent fine = new Intent(this,WishListActivity.class);
         startActivity(fine);
     }
 
@@ -120,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
     }
 
     public void addwants(View btn){
-        Intent adddd = new Intent(this,add_pageActivity.class);
+        Intent adddd = new Intent(this,Add_sthActivity.class);
         startActivity(adddd);
     }
 
@@ -137,22 +135,6 @@ public class MainActivity extends AppCompatActivity implements Runnable {
 
 
             Document doc = null;
-
-            try {
-
-                doc = Jsoup.connect("https://www.billboard.com/charts/hot-100").get();
-
-                Elements ols = doc.getElementsByTag("ol");
-
-
-                int m = 0;
-                Log.i(TAG, "run: " + ols);
-
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
 
         }
 

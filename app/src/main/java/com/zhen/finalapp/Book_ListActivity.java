@@ -3,6 +3,8 @@ package com.zhen.finalapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import android.app.Activity;
@@ -26,7 +28,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Book_ListActivity extends ListActivity implements Runnable {
+public class Book_ListActivity extends ListActivity implements Runnable , AdapterView.OnItemClickListener{
+
 
 
     Handler handler;
@@ -165,5 +168,14 @@ public class Book_ListActivity extends ListActivity implements Runnable {
         }
 
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        getListView().setOnItemClickListener(this);
+        Log.i(TAG, "onItemClick: parent=" + parent);
+        Log.i(TAG, "onItemClick: view=" + view);
+        Log.i(TAG, "onItemClick: position=" + position);
+        Log.i(TAG, "onItemClick: id=" + id);
     }
+}
 
