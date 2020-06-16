@@ -30,5 +30,6 @@
     <string name="input2">input the title</string>
     <string name="input3">input the notes</string>
     <string name="open_List">OPEN LIST</string>
+    <string name="start">START</string>
 
 </resources>

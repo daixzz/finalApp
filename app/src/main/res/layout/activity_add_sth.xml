@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#F0D3CF"
+    android:background="#bebebe"
+    android:orientation="vertical"
     tools:context=".Add_sthActivity">
+
 
     <TextView
         android:id="@+id/addTitle"
         android:layout_width="match_parent"
         android:layout_height="75sp"
-        android:background="#C098A4"
+        android:background="#9dafa2"
 
         android:gravity="center"
         android:text="@string/adddsth"
         android:textSize="38sp"
         android:textStyle="bold" />
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,16 +33,18 @@
 
             android:layout_width="93dp"
             android:layout_height="46dp"
-            android:background="#E08B70"
+            android:background="#9dafa2"
             android:gravity="center"
-            android:textSize="25sp"
-            android:text="@string/datee" />
+            android:text="@string/datee"
+            android:textColor="#314A43"
+            android:textSize="25sp" />
 
         <EditText
             android:id="@+id/dateTo"
             android:layout_width="191dp"
             android:layout_height="match_parent"
             android:layout_gravity="left"
+            android:textColor="#314A43"
             android:layout_marginLeft="10dp"
             android:gravity="center" />
 
@@ -70,23 +72,24 @@
         <TextView
 
 
-
             android:id="@+id/Typee"
             android:layout_width="93dp"
             android:layout_height="46dp"
-            android:background="#E08B70"
+            android:textColor="#314A43"
+            android:background="#9dafa2"
             android:gravity="center"
-            android:textSize="25sp"
-            android:text="@string/typee" />
+            android:text="@string/typee"
+            android:textSize="25sp" />
 
 
         <Spinner
-            android:layout_marginLeft="10dp"
             android:id="@+id/hisp"
-            android:background="#CDA7A9"
-
             android:layout_width="250dp"
-            android:layout_height="40dp" />
+            android:layout_height="40dp"
+
+
+            android:layout_marginLeft="10dp"
+            android:background="#8e9694" />
 
 
     </LinearLayout>
@@ -105,10 +108,11 @@
             android:id="@+id/namee"
             android:layout_width="93dp"
             android:layout_height="46dp"
-            android:background="#E08B70"
+            android:background="#9dafa2"
             android:gravity="center"
-            android:textSize="25sp"
-            android:text="@string/add_name" />
+            android:textColor="#314A43"
+            android:text="@string/add_name"
+            android:textSize="25sp" />
 
         <EditText
             android:id="@+id/itsok"
@@ -116,9 +120,9 @@
             android:layout_height="46dp"
             android:layout_marginLeft="10dp"
             android:gravity="center"
+            android:textColor="#314A43"
 
             android:hint="@string/input2" />
-
 
 
     </LinearLayout>
@@ -128,6 +132,7 @@
         android:layout_height="55dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
+
         android:orientation="horizontal">
 
 
@@ -137,15 +142,17 @@
             android:id="@+id/notes"
             android:layout_width="93dp"
             android:layout_height="46dp"
-            android:background="#E08B70"
+            android:textColor="#314A43"
+            android:background="#9dafa2"
             android:gravity="center"
-            android:textSize="25sp"
-            android:text="@string/notes" />
+            android:text="@string/notes"
+            android:textSize="25sp" />
 
         <EditText
             android:id="@+id/thatsalright"
             android:layout_width="250dp"
             android:layout_height="46dp"
+            android:textColor="#314A43"
             android:layout_marginLeft="10dp"
             android:gravity="center"
 
@@ -160,16 +167,14 @@
         android:layout_height="64dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:background="#E08B70"
+        android:background="#9dafa2"
 
         android:gravity="center"
-
+        android:textColor="#314A43"
+        android:textSize="25dp"
         android:onClick="onOpen"
         android:text="Button"
         tools:text="@string/open_List" />
-
-
-
 
 
 </LinearLayout>

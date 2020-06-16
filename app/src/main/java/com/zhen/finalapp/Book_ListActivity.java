@@ -87,8 +87,8 @@ public class Book_ListActivity extends ListActivity implements Runnable , Adapte
         listItems = new ArrayList<HashMap<String, String>>();
         for (int i = 0; i < 10; i++) {
             HashMap<String, String> map = new HashMap<String, String>();
-            map.put("bookname", "name： " + i); // 标题文字
-            map.put("authorname", "author" + i); // 详情描述
+            map.put("bookname", "........?........ " ); // 标题文字
+            map.put("authorname", "........!........" ); // 详情描述
             listItems.add(map);
         }
         // 生成适配器的Item和动态数组对应的元素

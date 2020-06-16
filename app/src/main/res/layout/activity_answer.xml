@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#F0D3CF"
-
     android:layout_height="match_parent"
+    android:background="#bebebe"
+
+    android:orientation="vertical"
     tools:context=".AnswerActivity">
 
 
@@ -14,7 +14,7 @@
         android:id="@+id/titlelll"
         android:layout_width="match_parent"
         android:layout_height="75sp"
-        android:background="#C098A4"
+        android:background="#9dafa2"
 
         android:gravity="center"
         android:text="@string/answerrr"
@@ -25,6 +25,6 @@
     <ListView
         android:id="@android:id/list"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

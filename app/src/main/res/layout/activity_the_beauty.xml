@@ -4,19 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/addshtn"
+    android:background="@drawable/start"
     tools:context=".theBeautyActivity">
 
     <Button
         android:id="@+id/buttonCon"
-        android:layout_width="291dp"
-        android:layout_height="59dp"
-        android:background="@drawable/button"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:background="#8375b3"
         android:onClick="openMusic"
+        android:text="@string/start"
+        android:textColor="#314A43"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.534" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

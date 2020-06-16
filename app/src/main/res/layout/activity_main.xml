@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F0D3CF"
+    android:background="#bebebe"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:background="#C098A4"
+        android:background="#9dafa2"
         android:gravity="center"
         android:text="@string/title"
         android:textColorHighlight="#314A43"
@@ -37,77 +37,66 @@
         android:layout_height="wrap_content"
         android:text="@string/Searchch" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
 
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="200dp"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/Button_books"
             android:layout_width="170dp"
             android:layout_height="170dp"
-            android:background="#A26567"
+            android:layout_marginLeft="30dp"
+            android:background="#7a9f90"
             android:onClick="openBooks"
             android:text="@string/checkbooks"
             android:textColor="#375842"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.059"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.194" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="170dp"
             android:layout_height="170dp"
-            android:background="#CDA7A9"
+            android:layout_marginLeft="20dp"
+            android:background="#a9c6b6"
             android:onClick="addwants"
             android:text="@string/addsthhh"
             android:textColor="#375842"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.883"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.754" />
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button2"
             android:layout_width="170dp"
             android:layout_height="170dp"
-            android:layout_marginTop="32dp"
-            android:background="#DB91A4"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:background="#6f9081"
             android:onClick="openWishList"
             android:text="@string/showwish"
-            android:textColor="#375842"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.883"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.121" />
+            android:textColor="#375842" />
 
         <Button
             android:id="@+id/TOP_movies"
             android:layout_width="170dp"
             android:layout_height="170dp"
-            android:background="#84575D"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#5c7a6c"
             android:onClick="openMovie"
-            android:text="Button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.066"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.756"
-            tools:text="@string/Top_moviess" />
+            android:text="@string/Top_moviess" />
 
+    </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>

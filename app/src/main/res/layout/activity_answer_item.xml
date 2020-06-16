@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#bebebe"
     android:orientation="vertical"
-    android:background="#F0D3CF"
 
     tools:context=".Answer_itemActivity">
 
@@ -15,14 +15,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment"
-        android:textStyle="bold"
-        android:textSize="25sp" />
-
-
+        android:textSize="25sp"
+        android:textColor="#314A43"
+        android:textStyle="bold" />
 
 
     <TextView
         android:id="@+id/producer"
+        android:textColor="#314A43"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="hello "

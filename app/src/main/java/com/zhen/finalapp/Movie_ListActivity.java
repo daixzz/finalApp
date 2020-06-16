@@ -82,8 +82,8 @@ public class Movie_ListActivity extends ListActivity implements Runnable{
         listItems = new ArrayList<HashMap<String, String>>();
         for (int i = 0; i < 10; i++) {
             HashMap<String, String> map = new HashMap<String, String>();
-            map.put("movieName", "name： " + i); // 标题文字
-            map.put("DirectorName", "author" + i); // 详情描述
+            map.put("movieName", "........?........ " ); // 标题文字
+            map.put("DirectorName", "........!........"  ); // 详情描述
             listItems.add(map);
         }
         // 生成适配器的Item和动态数组对应的元素

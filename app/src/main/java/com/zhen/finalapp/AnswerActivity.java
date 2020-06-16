@@ -79,8 +79,8 @@ public class AnswerActivity extends ListActivity implements Runnable{
         listItems = new ArrayList<HashMap<String, String>>();
         for (int i = 0; i < 10; i++) {
             HashMap<String, String> map = new HashMap<String, String>();
-            map.put("resultName", "name? " + i); // ????
-            map.put("Producer", "author" + i); // ????
+            map.put("resultName", "........?........：? " ); // ????
+            map.put("Producer", "........!........：" ); // ????
             listItems.add(map);
         }
         listItemAdapter = new SimpleAdapter(this, listItems, // listItems???

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#bebebe"
     android:orientation="vertical"
-    android:background="#F0D3CF"
 
     tools:context=".Book_ListActivity">
 
@@ -14,18 +14,18 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="75sp"
-        android:textSize="38dp"
+        android:background="#9dafa2"
 
-        android:textStyle="bold"
         android:gravity="center"
-        android:background="#C098A4"
-        android:text="@string/booktitle" />
+        android:text="@string/booktitle"
+        android:textSize="38dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="40sp"
-        android:background="#C098A4"
+        android:background="#9dafa2"
         android:gravity="end"
 
         android:text="@string/fromwhere"
@@ -37,6 +37,5 @@
         android:id="@android:id/list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:focusable="true"
-        />
+        android:focusable="true" />
 </LinearLayout>

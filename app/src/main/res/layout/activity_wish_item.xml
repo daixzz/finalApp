@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#F0D3CF"
+    android:background="#bebebe"
+    android:orientation="vertical"
 
     tools:context=".wish_itemActivity">
 
@@ -14,18 +14,18 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment"
-        android:textStyle="bold"
-        android:textSize="20sp" />
-
-
+        android:textColor="#314A43"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 
     <TextView
         android:id="@+id/wishNote"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textColor="#314A43"
         android:gravity="end"
         android:text="hello "
-        android:textSize="15sp" />
+        android:textSize="20sp" />
 
 </LinearLayout>

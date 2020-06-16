@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -83,6 +84,7 @@ public class WishListActivity extends ListActivity implements Runnable,AdapterVi
         };
 
         getListView().setOnItemClickListener(this);
+        getListView().setBackgroundColor(Color.parseColor("#bebebe"));
 
     }
 
@@ -91,8 +93,8 @@ public class WishListActivity extends ListActivity implements Runnable,AdapterVi
         listItems = new ArrayList<HashMap<String, String>>();
         for (int i = 0; i < 10; i++) {
             HashMap<String, String> map = new HashMap<String, String>();
-            map.put("titles", "title： " + i); // 标题文字
-            map.put("notes", "notes" + i); // 详情描述
+            map.put("titles", "........?........ " ); // 标题文字
+            map.put("notes", "........!........：" ); // 详情描述
             listItems.add(map);
         }
         // 生成适配器的Item和动态数组对应的元素
