@@ -45,26 +45,8 @@
 
         <Button
             android:id="@+id/Button_books"
-            android:layout_width="291dp"
-            android:layout_height="59dp"
-            android:layout_marginEnd="284dp"
-            android:layout_marginRight="284dp"
-            android:background="#CD989A"
-            android:onClick="openMovie"
-            android:text="@string/movietitle"
-            android:textColor="#375842"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.048"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.836" />
-
-        <Button
-            android:id="@+id/Button_movie"
-            android:layout_width="144dp"
-            android:layout_height="240dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:background="#A26567"
             android:onClick="openBooks"
             android:text="@string/checkbooks"
@@ -79,8 +61,8 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="78dp"
-            android:layout_height="374dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:background="#CDA7A9"
             android:onClick="addwants"
             android:text="@string/addsthhh"
@@ -88,15 +70,15 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.951"
+            app:layout_constraintHorizontal_bias="0.883"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-           />
+            app:layout_constraintVertical_bias="0.754" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="128dp"
-            android:layout_height="92dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_marginTop="32dp"
             android:background="#DB91A4"
             android:onClick="openWishList"
@@ -104,35 +86,25 @@
             android:textColor="#375842"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.614"
+            app:layout_constraintHorizontal_bias="0.883"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.044" />
+            app:layout_constraintVertical_bias="0.121" />
 
         <Button
-            android:id="@+id/button4"
-            android:layout_width="63dp"
-            android:layout_height="108dp"
-            android:background="#A56D74"
-
+            android:id="@+id/TOP_movies"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:background="#84575D"
+            android:onClick="openMovie"
+            android:text="Button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.066"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.527" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="61dp"
-            android:layout_height="60dp"
-            android:background="#CE93B1"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.708"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.475" />
+            app:layout_constraintVertical_bias="0.756"
+            tools:text="@string/Top_moviess" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

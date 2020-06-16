@@ -29,5 +29,6 @@
     <string name="wishList">WISH LIST</string>
     <string name="input2">input the title</string>
     <string name="input3">input the notes</string>
+    <string name="open_List">OPEN LIST</string>
 
 </resources>

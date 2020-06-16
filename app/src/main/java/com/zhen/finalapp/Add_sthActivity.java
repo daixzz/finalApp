@@ -19,6 +19,8 @@ import java.util.Calendar;
 public class Add_sthActivity extends AppCompatActivity {
 
 
+    ItemManager manager;
+
     EditText date;
     String dateto;
 
@@ -98,14 +100,16 @@ public class Add_sthActivity extends AppCompatActivity {
         total = "[" + text + "]" +"——" + dateto +":" + title;
         Intent ok = new Intent(this,WishListActivity.class);
 
-        ok.putExtra("total",total);
-        ok.putExtra("notes",notes);
+
+        thingItem wiItem = new thingItem(title, notes);
+        manager = new ItemManager(this);
+        manager.add(wiItem);
         startActivity(ok);
 
 
 
-
     }
+
 
 
 

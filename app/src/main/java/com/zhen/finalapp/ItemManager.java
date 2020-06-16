@@ -66,4 +66,10 @@ public class ItemManager {
         db.delete(TBNAME, "ID=?", new String[]{String.valueOf(id)});
         db.close();
     }
+
+    public void deleteAll(){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db.delete(TBNAME,null,null);
+        db.close();
+    }
 }
