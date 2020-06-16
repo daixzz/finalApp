@@ -1,11 +1,15 @@
 package com.zhen.finalapp;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -90,6 +94,27 @@ public class Add_sthActivity extends AppCompatActivity {
                 ,calendar.get(Calendar.YEAR)
                 ,calendar.get(Calendar.MONTH)
                 ,calendar.get(Calendar.DAY_OF_MONTH)).show();
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.ranking,menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.menu_set){
+
+            Intent fine = new Intent(this,MainActivity.class);
+            startActivity(fine);        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     public void onOpen(View v){

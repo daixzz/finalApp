@@ -170,10 +170,10 @@
         android:background="#9dafa2"
 
         android:gravity="center"
-        android:textColor="#314A43"
-        android:textSize="25dp"
         android:onClick="onOpen"
-        android:text="@string/open_List" />
+        android:text="@string/addto"
+        android:textColor="#314A43"
+        android:textSize="25dp" />
 
 
 </LinearLayout>

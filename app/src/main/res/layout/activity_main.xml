@@ -14,7 +14,7 @@
         android:layout_height="75dp"
         android:background="#9dafa2"
         android:gravity="center"
-        android:text="@string/title"
+        android:text="@string/main_Title"
         android:textColorHighlight="#314A43"
         android:textSize="35sp"
         android:textStyle="bold"
@@ -95,6 +95,7 @@
             android:background="#5c7a6c"
             android:onClick="openMovie"
             android:text="@string/Top_moviess"
+            android:textColor="#375842"
             android:textSize="20sp" />
 
     </LinearLayout>

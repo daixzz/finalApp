@@ -31,5 +31,8 @@
     <string name="input3">input the notes</string>
     <string name="open_List">OPEN LIST</string>
     <string name="start">START</string>
+    <string name="addto">ADD TO THE LIST</string>
+    <string name="labell">benZhenAPP</string>
+    <string name="main_Title"><![CDATA[iMovie & iEnjoy]]></string>
 
 </resources>

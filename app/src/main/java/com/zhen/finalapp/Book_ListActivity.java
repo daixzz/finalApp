@@ -1,8 +1,12 @@
 package com.zhen.finalapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -82,7 +86,26 @@ public class Book_ListActivity extends ListActivity implements Runnable , Adapte
         };
     }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.ranking,menu);
+        return true;
+    }
 
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.menu_set){
+
+            Intent fine = new Intent(this,MainActivity.class);
+            startActivity(fine);        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
     private void initListView() {
         listItems = new ArrayList<HashMap<String, String>>();
         for (int i = 0; i < 10; i++) {

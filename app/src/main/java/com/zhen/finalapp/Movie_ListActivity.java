@@ -1,13 +1,17 @@
 package com.zhen.finalapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -93,6 +97,28 @@ public class Movie_ListActivity extends ListActivity implements Runnable{
                 new int[] { R.id.movieName, R.id.directorName }
         );
     }
+
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.ranking,menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.menu_set){
+
+            Intent fine = new Intent(this,MainActivity.class);
+            startActivity(fine);        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
     public void run() {
 
 
@@ -154,6 +180,11 @@ public class Movie_ListActivity extends ListActivity implements Runnable{
                 Log.i("wwwww",tdStr);
                 Log.i(TAG, "run: " +psss);
             }
+
+
+
+
+
 
             marker = true;
 

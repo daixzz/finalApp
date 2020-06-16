@@ -77,8 +77,8 @@ public class MainActivity extends AppCompatActivity implements Runnable {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.menu_set){
-            openConfig();
-
+            Intent fine = new Intent(this,MainActivity.class);
+            startActivity(fine);
         }
 
             return super.onOptionsItemSelected(item);
